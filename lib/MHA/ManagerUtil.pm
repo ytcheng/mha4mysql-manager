@@ -31,7 +31,7 @@ use Log::Dispatch::Screen;
 sub init_log {
   my $log_output = shift;
   my $level      = shift;
-  $level = "info" unless ($level);
+  $level = "debug" unless ($level);
   my $log = Log::Dispatch->new( callbacks => $MHA::ManagerConst::log_fmt );
   unless ($log_output) {
     $log->add(
